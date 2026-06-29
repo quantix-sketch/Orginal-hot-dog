@@ -1,8 +1,8 @@
-[phases.build]
-cmds = ["pip install -r requirements.txt"]
+[phases.setup]
+nixPkgs = ["python311", "python311Packages.pip"]
 
-[variables]
-NIXPACKS_PYTHON_VERSION = "3.11"
+[phases.install]
+cmds = ["pip install aiogram==3.7.0 aiohttp==3.9.5"]
 
 [start]
 cmd = "python bot.py"
